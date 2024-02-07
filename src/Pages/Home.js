@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import '../css/home.css';
+import Carousel from "react-bootstrap/Carousel";
+import na1Img from '../assets/na1.jpg';
+import na2Img from '../assets/na2.jpg';
+import na3Img from '../assets/na3.jpg';
+
+// import CarouselBox from "../Components/CarouselBox";
 
 export default class Home extends Component {
   render() {
     return (
       <body>
   <div class="intro">
-    
-    <div class="container_intro">
+
+    <div class="container_intro"> 
       <div class="container-intro">
           <h1 class="intro__title"> HOTEL </h1>
           <h2 class="intro__text">  Элитный отель “Royal hotel” предлагает вам провести незабываемый для вас и вашей семьи отдых.</h2>
@@ -18,7 +24,7 @@ export default class Home extends Component {
       </div>
     </div>
     <div class="border">
-      <div class="cont">
+      {/* <div class="cont">
         <img src="na3.jpg" alt="" width="400" height="350"/>
       </div>
       <div class="cont">
@@ -26,7 +32,41 @@ export default class Home extends Component {
       </div>
       <div class="cont">
         <img src="na2.jpg" alt="" width="450" height="350"/>
-      </div>
+      </div> */}
+      <Carousel>
+        <Carousel.Item>
+            <img
+              className="d-block w-80"
+              src={na1Img}
+              alt='Номер на одного'
+            />
+            <Carousel.Caption>
+              <h2>Номер на одного человека</h2>
+            </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+            <img
+              className="d-block w-80"
+              src={na2Img}
+              alt='Номер на двух'
+            />
+            <Carousel.Caption>
+              <h2>Номер на два человека</h2>
+            </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+            <img
+              className="d-block w-80"
+              src={na3Img}
+              alt='Номер на троих'
+            />
+            <Carousel.Caption>
+              <h2>Номер на три человека</h2>
+            </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </div>
     <div class="block__3">
       <h1 class="adress">АДРЕС</h1>
